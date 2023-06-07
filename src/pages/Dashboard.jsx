@@ -1,9 +1,10 @@
 import { Flex, Box, Button, ButtonGroup, Spacer } from "@chakra-ui/react";
+import BookCard from "../components/BookCard";
 
 const Dashboard = () => {
   return (
     <>
-      <Flex>
+      <Flex direction="column">
         <div className="header bg-sidebar w-screen h-screen">
           <Box
             display="flex"
@@ -30,7 +31,9 @@ const Dashboard = () => {
             </Flex>
           </Box>
         </div>
-        <div className="content bg-sidebar">Content</div>
+        <div className="content bg-sidebar">
+          <BookCard data={{title: "Judul", name: "author nih"}} />
+        </div>
       </Flex>
     </>
   );

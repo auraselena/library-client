@@ -4,7 +4,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Sidebar from "./components/Sidebar";
-import BookList from "./pages/BookList";
+// import BookList from "./pages/BookList";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       {/* <Sidebar /> */}
       <Routes>
         <Route element={<Dashboard />} path="/" />
-        <Route element={<BookList />} path="/book-list" />
+        {/* <Route element={<BookList />} path="/book-list" /> */}
       </Routes>
     </div>
     </>
