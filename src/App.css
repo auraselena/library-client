@@ -37,6 +37,24 @@
   }
 }
 
-.sidebar {
-  position: fixed;
+#navbar {
+  height: 70px;
+  z-index: 3;
+  position: absolute;
+}
+
+#circle {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  margin-top:-180px;
+  margin-left:-200px;
+  transform:rotate(-6deg)
+}
+
+#above-circle {
+  position: absolute;
+  z-index: 2;
+  margin-top: -570px;
+  padding-left:210px
 }

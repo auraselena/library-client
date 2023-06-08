@@ -16,7 +16,3 @@ code {
     monospace;
 }
 
-.sidebar {
-  @apply bg-sidebar
-  text-sidebarText
-}

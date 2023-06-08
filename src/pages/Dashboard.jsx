@@ -1,40 +1,31 @@
-import { Flex, Box, Button, ButtonGroup, Spacer } from "@chakra-ui/react";
+import { Input, Flex, Box, Button, ButtonGroup, InputRightElement, InputGroup } from "@chakra-ui/react";
 import BookCard from "../components/BookCard";
+import SignUpModal from "../components/SignUpModal";
+import { BsSearchHeart } from "react-icons/bs";
+import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
   return (
     <>
-      <Flex direction="column">
-        <div className="header bg-sidebar w-screen h-screen">
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            width="100%"
-            height="100%"
-            py={12}
-            bgImage="url('https://assets.weforum.org/article/image/JMF96ETfn1kSViVnUou1Z0XIDwWcPpT5mrPc7-ytpAc.jpg')"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            mb={2}
-          >
-            <Flex flexDirection="column">
-              <h1 className="text-5xl font-bold text-white mb-9 bg-sidebar">
-                Find books, author you love,<br></br>or discover more
-              </h1>
-              <ButtonGroup gap="4">
-                <Button bg="#80b918">Sign up and start</Button>
-                <Button bg="#040f16" color="#ffffff">
-                  Sign in
-                </Button>
-              </ButtonGroup>
-            </Flex>
-          </Box>
-        </div>
-        <div className="content bg-sidebar">
-          <BookCard data={{title: "Judul", name: "author nih"}} />
-        </div>
-      </Flex>
+      <Box width="90vw" height="100vh" bg="#040f16" id="circle"></Box>
+
+      <Box height="100vh" bgImage="url('https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg')" bgPosition="center" bgSize="cover"></Box>
+      <Box id="above-circle">
+        <h1 className="text-5xl font-bold text-white mb-9 bg-sidebar">
+          Find books, author you love,<br></br>or discover more
+        </h1>
+        <InputGroup>
+          <Input pr="4.5rem" placeholder="Search book or author" bg="#040f16" borderColor="#80b918" _placeholder={{ opacity: 0.4, color: "#80b918" }} className="mb-6" />
+          <InputRightElement width="4.5rem">
+            <BsSearchHeart color="#ffffff" size="25px" />
+          </InputRightElement>
+        </InputGroup>
+        <SignUpModal />
+      </Box>
+
+      <div className="bg-sidebar">
+        <BookCard data={{ title: "Judul", name: "author nih" }} />
+      </div>
     </>
   );
 };
