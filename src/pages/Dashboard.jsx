@@ -2,7 +2,6 @@ import { Input, Flex, Box, Button, ButtonGroup, InputRightElement, InputGroup } 
 import BookCard from "../components/BookCard";
 import SignUpModal from "../components/SignUpModal";
 import { BsSearchHeart } from "react-icons/bs";
-import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
   return (
