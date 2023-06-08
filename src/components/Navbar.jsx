@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div id="navbar" className="flex justify-between w-full px-8 bg-sidebar">
-      <Button variant="link" color="#ffffff" mr={"500px"}>
+      <Button size="lg" variant="link" color="#ffffff" mr={"500px"}>
         LEXICON
       </Button>
       <>
@@ -15,12 +15,12 @@ const Navbar = () => {
           Author
         </Button>
         <Button variant="link" color="#ffffff">
-          Favorite
+          Trending
         </Button>
         <Button variant="link" color="#ffffff">
-          My Bookshelf
+          News & Interviews
         </Button>
-        <Button variant="link" color="#ffffff">
+        <Button variant="outline" color="#80b918" mt={4}>
           Sign In
         </Button>
       </>

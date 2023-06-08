@@ -1,4 +1,4 @@
-import { Input, Flex, Box, Button, ButtonGroup, InputRightElement, InputGroup } from "@chakra-ui/react";
+import { Input, Flex, Box, Button, ButtonGroup, InputRightElement, InputGroup, Text } from "@chakra-ui/react";
 import BookCard from "../components/BookCard";
 import SignUpModal from "../components/SignUpModal";
 import { BsSearchHeart } from "react-icons/bs";
@@ -22,8 +22,16 @@ const Dashboard = () => {
         <SignUpModal />
       </Box>
 
-      <div className="bg-sidebar">
-        <BookCard data={{ title: "Judul", name: "author nih" }} />
+      <div className="bg-sidebar py-24">
+        <Text paddingLeft="28" fontSize="4xl" as="b" color="#ebfa8c">
+          New Publications
+        </Text>
+        <Flex justify="space-evenly">
+          <BookCard data={{ title: "Book 1", name: "Author 1", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
+          <BookCard data={{ title: "Book 2", name: "Author 2", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
+          <BookCard data={{ title: "Book 3", name: "Author 3", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
+          <BookCard data={{ title: "Book 4", name: "Author 4", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
+        </Flex>
       </div>
     </>
   );
