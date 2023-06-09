@@ -3,6 +3,7 @@ import BookCard from "../components/BookCard";
 import SignUpModal from "../components/SignUpModal";
 import { BsSearchHeart } from "react-icons/bs";
 import BookFair from "../components/BookFair";
+import DonateBook from "../components/DonateBook";
 
 const Dashboard = () => {
   return (
@@ -37,6 +38,7 @@ const Dashboard = () => {
       </Box>
 
       <BookFair />
+      <DonateBook />
     </>
   );
 };
