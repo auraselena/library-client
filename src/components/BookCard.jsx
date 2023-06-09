@@ -3,7 +3,7 @@ import { Card, Square, CardHeader, CardBody, CardFooter, Image, Stack, Text, Div
 const BookCard = (props) => {
   return (
     <Card bg="#141d21" color="#ffffff" mt={10}>
-      <CardBody>
+      <CardBody maxW="60">
         <Image src={props.data.image} alt="Book" borderRadius="lg" width="200px" />
         <Stack mt="4" spacing="2">
           <Heading size="sm">{props.data.title}</Heading>
