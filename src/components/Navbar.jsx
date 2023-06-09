@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div id="navbar" className="flex justify-between w-full px-8 bg-sidebar">
-      <Button size="lg" variant="link" color="#ffffff" mr={"500px"}>
+      <Button fontSize="3xl" variant="link" color="#ffffff" mr={"500px"}>
         LEXICON
       </Button>
       <>

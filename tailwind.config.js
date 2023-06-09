@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         sidebar: '#040f16',
-        sidebarText: '#fffbfc'
+        sidebarText: '#fffbfc',
+        bg: '#141d21'
       }
     },
   },

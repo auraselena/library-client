@@ -5,6 +5,7 @@ import { BsSearchHeart } from "react-icons/bs";
 import BookFair from "../components/BookFair";
 import DonateBook from "../components/DonateBook";
 import ReviewCard from "../components/ReviewCard";
+import Footer from "../components/Footer";
 
 const Dashboard = () => {
   return (
@@ -13,7 +14,7 @@ const Dashboard = () => {
 
       <Box height="100vh" bgImage="url('https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg')" bgPosition="center" bgSize="cover"></Box>
       <Box id="above-circle">
-        <h1 className="text-5xl font-bold text-white mb-9 bg-sidebar">
+        <h1 className="text-5xl font-bold text-white mb-9">
           Find books, author you love,<br></br>or discover more
         </h1>
         <InputGroup>
@@ -22,6 +23,7 @@ const Dashboard = () => {
             <BsSearchHeart color="#ffffff" size="25px" />
           </InputRightElement>
         </InputGroup>
+        <h3 className="font-medium text-white mb-9">Millions of high-quality books from all around the world and reccommendations for you,<br></br>get started to discover all now.</h3>
         <SignUpModal />
       </Box>
 
@@ -51,6 +53,8 @@ const Dashboard = () => {
           <ReviewCard data={{pfp:"https://i1.rgstatic.net/ii/profile.image/11431281114594035-1674569097139_Q512/Selena-Aura.jpg",name: "Third Reviewer", review: "The app's recommendation system is spot-on, suggesting books based on my preferences. Impressive.", book_title: "Pachinko", book_cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588622924i/53331127.jpg", author: "Min Jin Lee", rate: "4.8"}} />
         </Flex>
       </Box>
+
+      <Footer />
     </>
   );
 };
