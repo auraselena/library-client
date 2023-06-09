@@ -1,7 +1,8 @@
-import { Input, Flex, Box, Button, ButtonGroup, InputRightElement, InputGroup, Text } from "@chakra-ui/react";
+import { Input, Flex, Box, Button, ButtonGroup, InputRightElement, InputGroup, Text, Image } from "@chakra-ui/react";
 import BookCard from "../components/BookCard";
 import SignUpModal from "../components/SignUpModal";
 import { BsSearchHeart } from "react-icons/bs";
+import BookFair from "../components/BookFair";
 
 const Dashboard = () => {
   return (
@@ -22,17 +23,20 @@ const Dashboard = () => {
         <SignUpModal />
       </Box>
 
-      <div className="bg-sidebar py-24">
-        <Text paddingLeft="28" fontSize="4xl" as="b" color="#ebfa8c">
-          New Publications
+      <Box className="bg-sidebar py-24 w-full">
+        <Text paddingLeft="20" fontSize="4xl" as="b" color="#ebfa8c">
+          Frequently Borrowed
         </Text>
         <Flex justify="space-evenly">
-          <BookCard data={{ title: "Book 1", name: "Author 1", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
-          <BookCard data={{ title: "Book 2", name: "Author 2", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
-          <BookCard data={{ title: "Book 3", name: "Author 3", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
-          <BookCard data={{ title: "Book 4", name: "Author 4", image: "https://cdn.gramedia.com/uploads/items/img466_PWkp431.jpg" }} />
+          <BookCard data={{ title: "Book 1", name: "Author 1", image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1304353253i/7665409.jpg" }} />
+          <BookCard data={{ title: "Book 2", name: "Author 2", image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431005462i/25498974.jpg" }} />
+          <BookCard data={{ title: "Book 3", name: "Author 3", image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1549121768i/43220998.jpg" }} />
+          <BookCard data={{ title: "Book 4", name: "Author 4", image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630823025i/56317605.jpg" }} />
+          <BookCard data={{ title: "Book 4", name: "Author 4", image: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1576370917l/32283133.jpg" }} />
         </Flex>
-      </div>
+      </Box>
+
+      <BookFair />
     </>
   );
 };

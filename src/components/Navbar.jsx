@@ -18,7 +18,7 @@ const Navbar = () => {
           Trending
         </Button>
         <Button variant="link" color="#ffffff">
-          News & Interviews
+          Book Fair
         </Button>
         <Button variant="outline" color="#80b918" mt={4}>
           Sign In
