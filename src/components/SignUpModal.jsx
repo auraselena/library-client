@@ -1,19 +1,34 @@
-import { Button, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, useToast } from "@chakra-ui/react";
+import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, FormControl, FormLabel, FormErrorMessage, FormHelperText, Input, useToast } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import Axios from "axios";
 
 const SignUpModal = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const toast = useToast();
-  const signUpButton = () => {
-    toast({
-      title: "Account created.",
-      description: "We've created your account for you.",
-      status: "success",
-      duration: 9000,
-      isClosable: true,
-    });
+  const signUpButton = (values) => {
+    Axios.post(process.env.REACT_APP_API_URL + "/users/sign-up", values)
+      .then((response) => {
+        toast({
+          title: `${response.data.message}`,
+          description: "We've created your account for you.",
+          status: "success",
+          position: "top",
+          duration: 5000,
+          isClosable: true,
+        });
+      })
+      .catch((error) => {
+        toast({
+          title: `${error.response.data.message}`,
+          description: "Please use another e-mail.",
+          status: "error",
+          position: "top",
+          duration: 5000,
+          isClosable: true,
+        });
+      });
   };
 
   const formik = useFormik({
